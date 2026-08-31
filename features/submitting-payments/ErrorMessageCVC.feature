@@ -7,3 +7,19 @@ Feature: Error message for the invalid CVC number
 
 
     #TODO: Create scenarios that cover all the acceptance criteria
+
+    Background:
+        Given user is on the enrollment page
+        And user has completed start application step
+        And user has completed payment plan step
+
+    Scenario Outline: CVC error message is displayed when enterd incomplete cvc number
+        When user enters "<incomplete_cvc_number>"
+        And user clicks the terms and conditions checkbox
+        Then user should see the error message "Your security code is incomplete."
+
+        Examples:
+            | incomplete_cvc_number |
+            | 1                     |
+            | 12                    |
+            
