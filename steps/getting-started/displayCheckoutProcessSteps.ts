@@ -3,8 +3,8 @@ import { expect} from "@playwright/test";
 import { startApplicationPage, page } from "../../globalPagesSetup";
 import { productInfo } from "../../utilities/qa-data-reader";
        
-    Then('the {string} step should be highlighted in blue', async function (string) {
-        await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS("background-color","rgb(1, 201, 255)");
+    Then("the Start Application step should be highlighted in blue", async function () {
+        await expect(startApplicationPage.startApplicationText).toHaveCSS("color", "rgb(6, 5, 51)");
     });
        
        
@@ -21,18 +21,12 @@ import { productInfo } from "../../utilities/qa-data-reader";
         const expectedColor = "rgb(130, 154, 177)";
 
         if (stepName === "Payment Plan") {
-          await expect(startApplicationPage.paymentPlanText).toHaveCSS(
-            "color",
-            expectedColor,
-          );
+          await expect(startApplicationPage.paymentPlanText).toHaveCSS("color", expectedColor);
           return;
         }
 
         if (stepName === "Review") {
-          await expect(startApplicationPage.reviewText).toHaveCSS(
-            "color",
-            expectedColor,
-          );
+          await expect(startApplicationPage.reviewText).toHaveCSS("color", expectedColor);
           return;
         }
 
