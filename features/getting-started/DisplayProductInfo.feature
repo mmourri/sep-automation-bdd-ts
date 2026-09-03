@@ -12,3 +12,15 @@ Feature: Display the product information
 
 
     #TODO: Create scenarios that cover all the acceptance criteria
+    
+    Scenario: verify product information is displayed correctly
+        Given user is on the enrollment page
+        Then the product name should be displayed on the information card
+        And the product name should match the product name on the left side of the screen
+        And the product price should be displayed
+        And the text indicating a flexible payment plan should be available is displayed
+        And the program start date is displayed
+        And the refund policy is displayed
+        And the final date for refunds is displayed
+
+    
