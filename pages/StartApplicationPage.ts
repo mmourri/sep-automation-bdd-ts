@@ -81,6 +81,9 @@ export class StartApplicationPage extends BasePage {
   public readonly refundEndDate: Locator 
     = this.page.locator("(//b[@class='info-value'])[2]");
 
+  public readonly refundPolicyText: Locator 
+    = this.page.locator("//*[contains(normalize-space(.), 'Refund policy') or contains(normalize-space(.), 'Return policy')]");
+
   public readonly programNameOnInfoCard: Locator 
     = this.page.locator("//p[@class='program-title primary-color']");
 
