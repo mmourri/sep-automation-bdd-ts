@@ -105,9 +105,4 @@ export class StartApplicationPage extends BasePage {
   public readonly originalPrice: Locator 
     = this.page.locator("//s[contains(.,'$')]");
 
-  
-
 }
-
-
-
